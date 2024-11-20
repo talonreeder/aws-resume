@@ -1,10 +1,22 @@
 import React from 'react';
-import './styles/index.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Resume from './components/Resume';
+import Projects from './components/Projects';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome To My Portfolio</h1>
+    <div>
+      <Header />
+      <Hero />
+      <About />
+      <Resume />
+      <Projects />
+      <Blog />
+      <Contact />
     </div>
   );
 }
