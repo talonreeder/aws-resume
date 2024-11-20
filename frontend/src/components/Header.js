@@ -7,6 +7,10 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="bg-blue-600 text-white fixed w-full z-10 shadow-md">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -28,15 +32,46 @@ function Header() {
         {/* Navigation Menu */}
         <nav
           className={`fixed top-0 left-0 h-full w-64 bg-blue-800 text-white shadow-lg transform transition-transform duration-300 ease-in-out z-20 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+            isOpen ? 'translate-x-0' : '-translate-x-full'
           } md:static md:w-auto md:h-auto md:bg-transparent md:shadow-none md:translate-x-0`}
         >
           <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0">
-            <li><a href="#about" className="hover:text-yellow-300 transition duration-300">About</a></li>
-            <li><a href="#resume" className="hover:text-yellow-300 transition duration-300">Resume</a></li>
-            <li><a href="#projects" className="hover:text-yellow-300 transition duration-300">Projects</a></li>
-            <li><a href="#blog" className="hover:text-yellow-300 transition duration-300">Blog</a></li>
-            <li><a href="#contact" className="hover:text-yellow-300 transition duration-300">Contact</a></li>
+            <li>
+              <a
+                href="#about"
+                className="hover:text-yellow-300 transition duration-300"
+                onClick={closeMenu}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#resume"
+                className="hover:text-yellow-300 transition duration-300"
+                onClick={closeMenu}
+              >
+                Resume
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                className="hover:text-yellow-300 transition duration-300"
+                onClick={closeMenu}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#blog"
+                className="hover:text-yellow-300 transition duration-300"
+                onClick={closeMenu}
+              >
+                Blog
+              </a>
+            </li>
           </ul>
         </nav>
 
